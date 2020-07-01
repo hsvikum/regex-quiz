@@ -1,0 +1,17 @@
+ .regexFlagSmallInput {
+    max-width: 4em;
+ }
+
+ .markSolution {
+    background-color: yellow;
+    color: black;
+    padding: initial;
+ }
+
+.solved {
+     color: green;
+ }
+
+.unsolved {
+    color: red;
+}

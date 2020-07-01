@@ -1,0 +1,62 @@
+{
+    "0": {
+        "index": 0,
+        "title": "Direct Pattern",
+        "body": "Just putting the word you need to match in the pattern will get the word you are looking for",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "challenges": [
+            {
+                "problem": "Who let the dogs out ? who ? who ?",
+                "solution": ["Who"]
+            },
+            {
+                "problem": "Don't Who is batman ?",
+                "solution": ["Who"]
+            }
+        ]
+    },
+    "1": {
+        "index": 1,
+        "title": "Start Of A Pattern",
+        "body": "^ symbol marks the start of a pattern.Only Match String starting with \"Who\"",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "challenges": [
+            {
+                "problem": "Who let the dogs out ?",
+                "solution": ["Who"]
+            },
+            {
+                "problem": "Don't know Who is batman ?",
+                "solution": []
+            }
+        ]
+    },
+    "2": {
+        "index": 2,
+        "title": "End Of A Pattern",
+        "body": "$ symbol marks the end of a pattern.Match Below patterns 😈😉",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "challenges": [
+            {
+                "problem": "Who let the dogs out ? who ? who ?",
+                "solution": ["who ?"]
+            },
+            {
+                "problem": "Who is batman ? who ? she asked.",
+                "solution": []
+            }
+        ]
+    }
+}
