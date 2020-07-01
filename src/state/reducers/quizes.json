@@ -1,7 +1,6 @@
 {
     "0": {
-        "index": 0,
-        "title": "Direct Pattern",
+        "title": "Basic Syntax: Direct Pattern",
         "body": "Just putting the word you need to match in the pattern will get the word you are looking for",
         "answer": {
             "regex" :"",
@@ -20,8 +19,7 @@
         ]
     },
     "1": {
-        "index": 1,
-        "title": "Start Of A Pattern",
+        "title": "Basic Syntax: Start Of A Pattern",
         "body": "^ symbol marks the start of a pattern.Only Match String starting with \"Who\"",
         "answer": {
             "regex" :"",
@@ -40,8 +38,7 @@
         ]
     },
     "2": {
-        "index": 2,
-        "title": "End Of A Pattern",
+        "title": "Basic Syntax: End Of A Pattern",
         "body": "$ symbol marks the end of a pattern.Match Below patterns 😈😉",
         "answer": {
             "regex" :"",
@@ -56,6 +53,40 @@
             {
                 "problem": "Who is batman ? who ? she asked.",
                 "solution": []
+            }
+        ]
+    },
+    "3": {
+        "title": "Basic Syntax: Escape Is Eminent",
+        "body": "You need to use the escape symbol (\\) when running into any of the special characters.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "challenges": [
+            {
+                "problem": "I need $500.",
+                "solution": ["$500"]
+            }
+        ]
+    },
+    "4": {
+        "title": "Basic Syntax: This Or That",
+        "body": "| symbol allows you to match multiple items",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "challenges": [
+            {
+                "problem": "Who let the dogs out ? who ? who ?",
+                "solution": ["who", "Who"]
+            },
+            {
+                "problem": "Who is batman ? who ? she asked.",
+                "solution": ["batman", "who"]
             }
         ]
     }
