@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/welcome.css';
-import { Button } from 'primereact/button';
+import { Button, Card } from 'react-bootstrap';
 
 class Welcome extends Component {
 
@@ -10,15 +9,16 @@ class Welcome extends Component {
 
   render() {
     return (
-      <div className="welcome center glass">
-          <h1>
-              Regex Quiz
-          </h1>
-          <p>
-              Welcome to Regex Quiz. In the following parts we will go through some fun challenges to test and learn JS regex and its capabilities.
-          </p>
-          <Button label="Continue" className="p-button-raised" onClick={this.handleClick}/>
-      </div>
+      <Card className="text-center">
+        <Card.Header>Regex Quiz</Card.Header>
+        <Card.Body>
+          <Card.Title>Welcome to Regex Quiz</Card.Title>
+          <Card.Text>
+          In the following parts we will go through some fun challenges to test and learn JS regex and its capabilities.
+          </Card.Text>
+          <Button variant="primary" onClick={this.handleClick}>Continue</Button>
+        </Card.Body>
+      </Card>
     );
   }
 }
