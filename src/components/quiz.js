@@ -36,6 +36,9 @@ class Quiz extends Component {
 
   onChangeRegexFlag = (value) => {
     let newValue = this.state.answer;
+    if (!/g/g.test(value)) {
+      value = 'g'+value;
+    }
     newValue.flag = value;
     this.setState({
       answer: newValue
@@ -56,15 +59,15 @@ class Quiz extends Component {
   render() {
     return (
       <Card className="text-center">
-        <Card.Header>Challenge {this.state.index + 1} of {this.props.quizCount}</Card.Header>
+        <Card.Header>Challenge {this.props.currentQuizIndex + 1} of {this.props.quizCount}</Card.Header>
         <Card.Body>
           <Card.Title>{this.state.title}</Card.Title>
           <Card.Text>
             {this.state.body}
           </Card.Text>
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-sm-center">
             <Form inline>
-              <InputGroup className="mb-2 mr-sm-2">
+              <InputGroup>
                 <InputGroup.Prepend>
                   <InputGroup.Text>/</InputGroup.Text>
                 </InputGroup.Prepend>
@@ -87,7 +90,21 @@ class Quiz extends Component {
               </InputGroup>
             </Form>
           </Row>
-          <Table striped bordered hover>
+          <Row>
+            <Col>
+              {
+                (!this.props.isFirst) &&
+                <Button variant="primary" disabled={this.props.isFirst} onClick={this.handlePrevious}>Previous</Button>
+              }
+            </Col>
+            <Col></Col>
+            <Col>
+              {(!this.props.isLast) &&
+                <Button variant="success" onClick={this.handleNext}>Next</Button>
+              }
+            </Col>
+          </Row>
+          <Table striped bordered hover className="challengeTable">
             <thead>
               <tr>
                 <th>Challenge</th>
@@ -109,26 +126,12 @@ class Quiz extends Component {
                               { !!(this.state.answer.regex) && regex ? <Highlight match={regex} text={challenge.problem} highlightClassname="markSolution" /> : challenge.problem }                      
                             </td>
                             <td>{challenge.solution.join(", ")}</td>
-                            <td>{!!(this.state.answer.regex) && regex && this.isSolved(challenge.problem, challenge.solution, regex) ? <span className="solved">Solved</span> : <span className="unsolved">Unsolved</span>}</td>
+                            <td>{ !!(this.state.answer.regex) && regex && this.isSolved(challenge.problem, challenge.solution, regex) ? <span className="solved">Solved</span> : <span className="unsolved">Unsolved</span>}</td>
                          </tr>
                 })
               }
             </tbody>
           </Table>
-          <Row>
-            <Col>
-              {
-                (!this.props.isFirst) &&
-                <Button variant="primary" disabled={this.props.isFirst} onClick={this.handlePrevious}>Previous</Button>
-              }
-            </Col>
-            <Col></Col>
-            <Col>
-              {(!this.props.isLast) &&
-                <Button variant="success" onClick={this.handleNext}>Next</Button>
-              }
-            </Col>
-          </Row>
         </Card.Body>
       </Card>
     );
@@ -139,6 +142,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     quiz: state.quizzes.quizzes[state.quizzes.currentQuiz],
     quizCount: Object.keys(state.quizzes.quizzes).length,
+    currentQuizIndex: state.quizzes.currentQuiz,
     isFirst: state.quizzes.currentQuiz === 0,
     isLast: state.quizzes.currentQuiz === Object.keys(state.quizzes.quizzes).length - 1,
   }

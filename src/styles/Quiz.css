@@ -15,3 +15,7 @@
 .unsolved {
     color: red;
 }
+
+.challengeTable {
+   margin: 10px;
+}
