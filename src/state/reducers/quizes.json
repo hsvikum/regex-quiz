@@ -541,7 +541,7 @@
     },
     "27":{
         "title": "Wildcards and Quantifiers: any character 1 or more ",
-        "body": "Use + to match any character(s) zero or more times.It matches the preceding character or group.",
+        "body": "Use + to match any character(s) one or more times.It matches the preceding character or group.",
         "answer": {
             "regex" :"",
             "flag": "g"
