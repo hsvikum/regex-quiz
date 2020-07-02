@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { nextQuiz, previousQuiz } from '../state/actions/quizzesActions'
 import { Button, Card, Row, Col, Form, InputGroup, FormControl, Table } from 'react-bootstrap';
 import '../styles/Quiz.css'
-// import { Highlight } from 'react-highlight-regex';
 import _ from 'lodash';
 import Confetti from 'react-confetti'
 import Highlighter from "react-highlight-words";
@@ -158,11 +157,11 @@ class Quiz extends Component {
                   return <tr key={i}>
                             <td>
                               { !!(this.state.answer.regex) && regex ? 
-                              // <Highlight match={regex} text={challenge.problem} highlightClassname="markSolution" />
                               <Highlighter
                                 highlightClassName="markSolution"
                                 searchWords={[regex]}
                                 autoEscape={false}
+                                caseSensitive={true}
                                 textToHighlight={challenge.problem}
                               />
                                : challenge.problem }                      
