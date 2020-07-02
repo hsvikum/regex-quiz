@@ -10,10 +10,13 @@ const quizzesReducer = (state = initState, action) => {
         case NEXT_QUIZ:
             let nextIndex = state.currentQuiz + 1;
             if (nextIndex <= Object.keys(state.quizzes).length) {
-            return {
-                ...state,
-                [state.currentQuiz]: {...action.payload},
-                currentQuiz: nextIndex
+                return {
+                    ...state,
+                    quizzes : {
+                        ...state.quizzes,
+                        [state.currentQuiz]: {...action.payload}
+                    },
+                    currentQuiz: nextIndex
                 };
             } else {
                 return state;
@@ -23,7 +26,10 @@ const quizzesReducer = (state = initState, action) => {
             if (previousIndex >= 0) {
                 return {
                     ...state,
-                    [state.currentQuiz]: {...action.payload},
+                    quizzes : {
+                        ...state.quizzes,
+                        [state.currentQuiz]: {...action.payload}
+                    },
                     currentQuiz: previousIndex
                 };
             } else {

@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { nextQuiz, previousQuiz } from '../state/actions/quizzesActions'
 import { Button, Card, Row, Col, Form, InputGroup, FormControl, Table } from 'react-bootstrap';
 import '../styles/Quiz.css'
-import { Highlight } from 'react-highlight-regex';
+// import { Highlight } from 'react-highlight-regex';
 import _ from 'lodash';
+import Confetti from 'react-confetti'
+import Highlighter from "react-highlight-words";
 
 class Quiz extends Component {
 
@@ -32,6 +34,7 @@ class Quiz extends Component {
     this.setState({
       answer: newValue
     })
+    this.checkIfAllChallengesSolved();
   }
 
   onChangeRegexFlag = (value) => {
@@ -43,6 +46,36 @@ class Quiz extends Component {
     this.setState({
       answer: newValue
     })
+    this.checkIfAllChallengesSolved();
+  }
+
+  checkIfAllChallengesSolved = () => {
+    debugger;
+    let regex = null;
+    try {
+      regex = new RegExp(this.state.answer.regex, this.state.answer.flag)
+    } catch (error) {
+      console.log(error);
+    }
+    if (!!(this.state.answer.regex) && regex) {
+      let solved = true;
+      this.state.challenges.forEach(challenge => {
+        solved = solved && this.isSolved(challenge.problem, challenge.solution, regex)
+      });
+      if (solved) {
+        this.setState({
+          solved: true
+        });
+      } else {
+        this.setState({
+          solved: false
+        });
+      }
+    } else {
+      this.setState({
+        solved: false
+      });
+    }
   }
 
   isSolved = (problem, solution, regex) => {
@@ -59,6 +92,7 @@ class Quiz extends Component {
   render() {
     return (
       <Card className="text-center">
+        { this.state.solved && this.state.decorate && <Confetti width={1000}/>}
         <Card.Header>Challenge {this.props.currentQuizIndex + 1} of {this.props.quizCount}</Card.Header>
         <Card.Body>
           <Card.Title>{this.state.title}</Card.Title>
@@ -123,7 +157,15 @@ class Quiz extends Component {
                   }
                   return <tr key={i}>
                             <td>
-                              { !!(this.state.answer.regex) && regex ? <Highlight match={regex} text={challenge.problem} highlightClassname="markSolution" /> : challenge.problem }                      
+                              { !!(this.state.answer.regex) && regex ? 
+                              // <Highlight match={regex} text={challenge.problem} highlightClassname="markSolution" />
+                              <Highlighter
+                                highlightClassName="markSolution"
+                                searchWords={[regex]}
+                                autoEscape={false}
+                                textToHighlight={challenge.problem}
+                              />
+                               : challenge.problem }                      
                             </td>
                             <td>{challenge.solution.join(", ")}</td>
                             <td>{ !!(this.state.answer.regex) && regex && this.isSolved(challenge.problem, challenge.solution, regex) ? <span className="solved">Solved</span> : <span className="unsolved">Unsolved</span>}</td>
