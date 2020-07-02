@@ -7,63 +7,103 @@
             "flag": "g"
         },
         "solved": false,
+        "decorate": false,
         "challenges": [
             {
-                "problem": "Who let the dogs out ? who ? who ?",
-                "solution": ["Who"]
+                "problem": "Im happy",
+                "solution": ["happy"]
             },
             {
-                "problem": "Don't Who is batman ?",
-                "solution": ["Who"]
+                "problem": "Im Soooooooo happy",
+                "solution": ["happy"]
             }
         ]
     },
     "1": {
-        "title": "Basic Syntax: Start Of A Pattern",
-        "body": "^ symbol marks the start of a pattern.Only Match String starting with \"Who\"",
+        "title": "Basic Syntax: Case insensitivity",
+        "body": "\"i\" flag will make the pattern case insensitive",
         "answer": {
             "regex" :"",
             "flag": "g"
         },
         "solved": false,
+        "decorate": false,
         "challenges": [
             {
-                "problem": "Who let the dogs out ?",
-                "solution": ["Who"]
+                "problem": "Batman is a not a hero he is a criminal",
+                "solution": ["Bat"]
             },
             {
-                "problem": "Don't know Who is batman ?",
-                "solution": []
+                "problem": "i ate a bat 🤒",
+                "solution": ["bat"]
             }
         ]
     },
     "2": {
-        "title": "Basic Syntax: End Of A Pattern",
-        "body": "$ symbol marks the end of a pattern.Match Below patterns 😈😉",
+        "title": "Basic Syntax: Match the globe 🌏",
+        "body": "\"g\" flag will try to find the pattern in the whole string.Otherwise only the first match will be found. \nFor the duration of this training \"g\" flag will be turned on.",
         "answer": {
             "regex" :"",
             "flag": "g"
         },
         "solved": false,
+        "decorate": false,
         "challenges": [
             {
-                "problem": "Who let the dogs out ? who ? who ?",
-                "solution": ["who ?"]
-            },
-            {
-                "problem": "Who is batman ? who ? she asked.",
-                "solution": []
+                "problem": "Gucci gang, Gucci gang, Gucci gang (Gucci gang!)",
+                "solution": ["Gucci gang","Gucci gang","Gucci gang","Gucci gang"]
             }
         ]
     },
     "3": {
-        "title": "Basic Syntax: Escape Is Eminent",
+        "title": "Basic Syntax: Start of the Journey🐎",
+        "body": "Use ^ character to indicate that the match need to happen on the start of the string",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": false,
+        "challenges": [
+            {
+                "problem": "Hello, is it me you're looking for?",
+                "solution": ["Hello"]
+            },
+            {
+                "problem": "She said Hello 😝",
+                "solution": []
+            }
+        ]
+    },
+    "4": {
+        "title": "Basic Syntax: End of the Journey🏁",
+        "body": "Use $ character to indicate that the match need to happen on the end of the string",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": false,
+        "challenges": [
+            {
+                "problem": "I think i saw a ghost",
+                "solution": ["ghost"]
+            },
+            {
+                "problem": "She is ghosting me",
+                "solution": []
+            }
+        ]
+    },
+    "5": {
+        "title": "Basic Syntax: Escape Is Eminent👮",
         "body": "You need to use the escape symbol (\\) when running into any of the special characters.",
         "answer": {
             "regex" :"",
             "flag": "g"
         },
         "solved": false,
+        "decorate": false,
         "challenges": [
             {
                 "problem": "I need $500.",
@@ -71,22 +111,619 @@
             }
         ]
     },
-    "4": {
-        "title": "Basic Syntax: This Or That",
-        "body": "| symbol allows you to match multiple items",
+    "6": {
+        "title": "Combined Challenge: 🐎 Beginning to The End 🏁",
+        "body": "Use the knowledge you gained so far to match the below strings",
         "answer": {
             "regex" :"",
             "flag": "g"
         },
         "solved": false,
+        "decorate": true,
         "challenges": [
             {
-                "problem": "Who let the dogs out ? who ? who ?",
-                "solution": ["who", "Who"]
+                "problem": "$450 Stallion",
+                "solution": ["$450 Stallion"]
             },
             {
-                "problem": "Who is batman ? who ? she asked.",
-                "solution": ["batman", "who"]
+                "problem": "She bought a $450 stallion",
+                "solution": []
+            },
+            {
+                "problem": "$450 stallion",
+                "solution": ["$450 stallion"]
+            },
+            {
+                "problem": "$450 stallion !😮",
+                "solution": []
+            }
+        ]
+    },
+    "7": {
+        "title": "Specific Characters: match any character in bracket",
+        "body": "use [\t] symbol and put the characters that you want to match inside.\nex: [aeiou]\n Note [\t] stands for a single character match.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "A is a vowel, E is a vowel, I is a vowel, O is a vowel, U is a vowel",
+                "solution": []
+            },
+            {
+                "problem": "a is a vowel, e is a vowel, i is a vowel, o is a vowel, u is a vowel",
+                "solution": ["a is","e is", "i is", "o is", "u is"]
+            }
+        ]
+    },
+    "8": {
+        "title": "Specific Characters: match any character in bracket works also for numbers too 📱",
+        "body": "Similar to the previous challenge.Try to match number prefixes.Remember [\t] stands for a single character match.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "0094 2654164 5468",
+                "solution": ["0094"]
+            },
+            {
+                "problem": "0092 2654164 5468",
+                "solution": ["0092"]
+            },
+            {
+                "problem": "0082 2654164 5468",
+                "solution": ["0082"]
+            }
+        ]
+    },
+    "9": {
+        "title": "Specific Characters: match any character in bracket combine numbers and characters🅰️ 🔢",
+        "body": "Try to match following.Remember [\t] stands for a single character match.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "1km 5nm 9cm xcm",
+                "solution": ["1km", "5nm", "9cm", "xcm"]
+            }
+        ]
+    },
+    "10": {
+        "title": "Specific Characters: match any character except ones in bracket🙅",
+        "body": "putting ^ inside the brackets makes the match avoid characters inside the brackets. Ex: [^vc]. Remember [^\t] stands for a single character match.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "batman catman vatman",
+                "solution": ["batman"]
+            }
+        ]
+    },
+    "11": {
+        "title": "Character Ranges: Match All characters from simple alphabet 🔡",
+        "body": "You might have understood putting each character separately in the brackets cumbersome😫.You can instead give character ranges. Ex: [a-z]",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "a b c d e f g h i j k l m n o p q r s t u v w x y z",
+                "solution": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            },
+            {
+                "problem": "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
+                "solution": []
+            }
+        ]
+    },
+    "12":{
+        "title": "Character Ranges: Match All characters from Capita And Simple alphabet🔠 🔡",
+        "body": "Same as previous but also match Capitals. Note: don't use i flag 🙅",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "a b c d e f g h i j k l m n o p q r s t u v w x y z",
+                "solution": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            },
+            {
+                "problem": "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
+                "solution": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+            }
+        ]
+    },
+    "13":{
+        "title": "Character Ranges: Match partial characters from Capita And Simple alphabet🔠 🔡",
+        "body": "You don't 🙅 always need to use the full alphabet range. Note: don't use i flag🙅",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "a b c d e f g h i j k l m n o p q r s t u v w x y z",
+                "solution": ["j", "k", "l", "m", "n", "o", "p", "q", "r", "x", "y", "z"]
+            },
+            {
+                "problem": "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
+                "solution": ["D", "E", "F", "G", "H", "I"]
+            }
+        ]
+    },
+    "14":{
+        "title": "Character Ranges: Match partial characters from Capita And Simple alphabet and numbers 🔠 🔡 🔢",
+        "body": "Same as previous but now there is a number range🔢. Note: don't use i flag🙅.Bit hard i know 😈",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 5 3 8 7 4 6 0 2 9",
+                "solution": ["j", "k", "l", "m", "n", "o", "p", "q", "r", "x", "y", "z", "2", "3", "4", "5", "6"]
+            },
+            {
+                "problem": "A B C D E F G H I 1 5 3 8 7 4 6 0 2 9 J K L M N O P Q R S T U V W X Y Z",
+                "solution": ["D", "E", "F", "G", "H", "I", "2", "3", "4", "5", "6"]
+            }
+        ]
+    },
+    "15":{
+        "title": "Character Ranges: Match all numbers without defining number range 🔢",
+        "body": "Yes you read it right 🕵 don't use a number range just ignore the alphabet so only numbers will remain 😈. Note: don't use i flag🙅.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "abcdefghijklmnopqrstuvwxyz1538746029",
+                "solution": ["1", "5", "3", "8", "7", "4", "6", "0", "2", "9"]
+            },
+            {
+                "problem": "ABCDEFGHI1538746029JKLMNOPQRSTUVWXYZ",
+                "solution": ["1", "5", "3", "8", "7", "4", "6", "0", "2", "9"]
+            }
+        ]
+    },
+    "16":{
+        "title": "Shorthand Character Classes: Life can be made simple 1 💆‍♂️",
+        "body": "We being diving into specific character matching sofar.But for most of the use cases we have simpler ways of doing matches.Use \\w to match all word characters (a-z, A-Z, 0-9, _)",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 5 3 8 7 4 6 0 2 9 _",
+                "solution": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "_"]
+            },
+            {
+                "problem": "A B C D E F G H I 1 5 3 8 7 4 6 0 2 9 J K L M N O P Q R S T U V W X Y Z",
+                "solution": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            }
+        ]
+    },
+    "17":{
+        "title": "Shorthand Character Classes: Life can be made simple 2 💆‍♂️",
+        "body": "We have the inverse match of All non word character match.Use \\W to match all non word characters ( every thing except a-z, A-Z, 0-9, _).in below challenges match all Word characters that's followed with a non word character (ie: space)",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 5 3 8 7 4 6 0 2 9",
+                "solution": ["a ", "b ", "c ", "d ", "e ", "f ", "g ", "h ", "i ", "j ", "k ", "l ", "m ", "n ", "o ", "p ", "q ", "r ", "s ", "t ", "u ", "v ", "w ", "x ", "y ", "z ", "0 ", "1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 "]
+            },
+            {
+                "problem": "A B C D E F G H I 1 5 3 8 7 4 6 0 2 9 J K L M N O P Q R S T U V W X Y Z",
+                "solution": ["A ","B ","C ","D ","E ","F ","G ","H ","I ","J ","K ","L ","M ","N ","O ","P ","Q ","R ","S ","T ","U ","V ","W ","X ","Y ","0 ", "1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 "]
+            }
+        ]
+    },
+    "18":{
+        "title": "Shorthand Character Classes: Life can be made simple 3 💆‍♂️",
+        "body": "Use \\d to match all digits.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 5 3 8 7 4 6 0 2 9",
+                "solution": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            },
+            {
+                "problem": "A B C D E F G H I 1 5 3 8 7 4 6 0 2 9 J K L M N O P Q R S T U V W X Y Z",
+                "solution": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            }
+        ]
+    },
+    "19":{
+        "title": "Shorthand Character Classes: Life can be made simple 4 💆‍♂️",
+        "body": "Use \\D to match all non digits.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "abcdefghijklmnopqrstuvw xyz1538746029",
+                "solution": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
+            },
+            {
+                "problem": "ABCDEFGHI1538746029JKLMNO PQRSTUVWXYZ",
+                "solution": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "]
+            }
+        ]
+    },
+    "20":{
+        "title": "Shorthand Character Classes: Life can be made simple 5 💆‍♂️",
+        "body": "Use \\s to matches any white space character (\r (carriage return),\n (new line), \t (tab), (form feed)).",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "abcdefghijklmnopqrstuvw xyz1\t538746029",
+                "solution": [" ", "\t"]
+            }
+        ]
+    },
+    "21":{
+        "title": "Shorthand Character Classes: Life can be made simple 6 💆‍♂️",
+        "body": "Use \\S to matches any non white space character.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "abcdefghijklmnopqrstuvw xyz1\t538746029",
+                "solution": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            }
+        ]
+    },
+    "22":{
+        "title": "Condition: 🍏 🍎",
+        "body": "Use | (pipe character) to make or conditions.Match both 🍏 🍎",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "green",
+                "solution": ["green"]
+            },
+            {
+                "problem": "red",
+                "solution": ["red"]
+            }
+        ]
+    },
+    "23":{
+        "title": "Matching Groups: Containing patterns",
+        "body": "Use () to contain a simple or complex pattern.We call these matching groups.Match both 🍏 🍎 apples",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "green apple",
+                "solution": ["green apple"]
+            },
+            {
+                "problem": "red apple",
+                "solution": ["red apple"]
+            }
+        ]
+    },
+    "24":{
+        "title": "Wildcards and Quantifiers : single character",
+        "body": "Use . to match any one character other than a new line character",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "hello",
+                "solution": ["hello"]
+            },
+            {
+                "problem": "hallo",
+                "solution": ["hallo"]
+            }
+        ]
+    },
+    "25":{
+        "title": "Wildcards and Quantifiers : any character zero or more 1",
+        "body": "Use * to match any character(s) zero or more times.It matches the preceding character or group",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "hello",
+                "solution": ["hello"]
+            },
+            {
+                "problem": "heeeeeello",
+                "solution": ["heeeeeello"]
+            },
+            {
+                "problem": "hllo",
+                "solution": ["hllo"]
+            }
+        ]
+    },
+    "26":{
+        "title": "Wildcards and Quantifiers Combined: any character zero or more 2",
+        "body": "Use * to match any character(s) zero or more times.Hint: Take note of a previous challenge 😈",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "hello",
+                "solution": ["hello"]
+            },
+            {
+                "problem": "heeeeeello",
+                "solution": ["heeeeeello"]
+            },
+            {
+                "problem": "hllo",
+                "solution": ["hllo"]
+            },
+            {
+                "problem": "hwarwareallo",
+                "solution": ["hwarwareallo"]
+            }
+        ]
+    },
+    "27":{
+        "title": "Wildcards and Quantifiers: any character 1 or more ",
+        "body": "Use + to match any character(s) zero or more times.It matches the preceding character or group.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "hello",
+                "solution": ["hello"]
+            },
+            {
+                "problem": "heeeeeello",
+                "solution": ["heeeeeello"]
+            },
+            {
+                "problem": "hllo",
+                "solution": []
+            },
+            {
+                "problem": "hwarwareallo",
+                "solution": []
+            }
+        ]
+    },
+    "28":{
+        "title": "Wildcards and Quantifiers: Exact n number of repeats",
+        "body": "Use {n} to match any character or group n times exactly",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "hellohellohellohello",
+                "solution": ["hellohellohellohello"]
+            },
+            {
+                "problem": "hellohellohellohellohello",
+                "solution": []
+            }
+        ]
+    },
+    "29":{
+        "title": "Wildcards and Quantifiers: At least n number of repeats",
+        "body": "Use {n,} to match any character or group at least n times exactly",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "hellohello",
+                "solution": []
+            },
+            {
+                "problem": "hellohellohello",
+                "solution": ["hellohellohello"]
+            },
+            {
+                "problem": "hellohellohellohello",
+                "solution": ["hellohellohellohello"]
+            },
+            {
+                "problem": "hellohellohellohellohello",
+                "solution": ["hellohellohellohellohello"]
+            }
+        ]
+    },
+    "30":{
+        "title": "Wildcards and Quantifiers: At least n number of repeats and at most m number of repeats",
+        "body": "Use {n,m} to match any character or group at least n times and at most m number of repeats",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "hellohello",
+                "solution": []
+            },
+            {
+                "problem": "hellohellohello",
+                "solution": ["hellohellohello"]
+            },
+            {
+                "problem": "hellohellohellohello",
+                "solution": ["hellohellohellohello"]
+            },
+            {
+                "problem": "hellohellohellohellohello",
+                "solution": []
+            }
+        ]
+    },
+    "31":{
+        "title": "Matching Groups Extended: Non capturing groups 🍏 🍎",
+        "body": "use (?:<pattern>) instead of (<pattern>) for Non capturing groups.This is very similar to capture groups from outside.But some times you don't need the capturing group in the results from the js function call. Match both 🍏 🍎 apples.Will explain more using https://regex101.com/",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "green apple",
+                "solution": ["green apple"]
+            },
+            {
+                "problem": "red apple",
+                "solution": ["red apple"]
+            }
+        ]
+    },
+    "32":{
+        "title": "Matching Groups Extended: Back referencing",
+        "body": "You do back referencing using \\m.Where the m is the m'th matching group.Back referencing allows you to refer a matching groups match again in the pattern.",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "I said Hi: Batman also said Hi",
+                "solution": ["I said Hi: Batman also said Hi"]
+            },
+            {
+                "problem": "I said Hey: Batman also said Hey",
+                "solution": ["I said Hey: Batman also said Hey"]
+            },
+            {
+                "problem": "I said Hey: Batman also said Hi",
+                "solution": []
+            }
+        ]
+    },
+    "33":{
+        "title": "Look Behind: Positive look behind",
+        "body": "You use positive look behind by (?<=<pattern>).You need positive look behind to see if there is a preceding pattern to consider the match as valid.Match the Happy Cow",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "Happy Cow",
+                "solution": ["Cow"]
+            },
+            {
+                "problem": "Sad Cow",
+                "solution": []
+            }
+        ]
+    },
+    "34":{
+        "title": "Look Behind: Negative look behind",
+        "body": "You use negative look behind by (?<!<pattern>).You need negative look behind to see if there is a preceding pattern to consider the match as invalid.Match the Sad Cow",
+        "answer": {
+            "regex" :"",
+            "flag": "g"
+        },
+        "solved": false,
+        "decorate": true,
+        "challenges": [
+            {
+                "problem": "Happy Cow",
+                "solution": []
+            },
+            {
+                "problem": "Sad Cow",
+                "solution": ["Cow"]
             }
         ]
     }
