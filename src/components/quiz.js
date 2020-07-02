@@ -161,7 +161,7 @@ class Quiz extends Component {
                                 highlightClassName="markSolution"
                                 searchWords={[regex]}
                                 autoEscape={false}
-                                caseSensitive={true}
+                                caseSensitive={!regex.ignoreCase}
                                 textToHighlight={challenge.problem}
                               />
                                : challenge.problem }                      
