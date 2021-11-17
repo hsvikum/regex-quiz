@@ -7,7 +7,7 @@
             "flag": "g"
         },
         "solved": false,
-        "decorate": false,
+        "decorate": true,
         "challenges": [
             {
                 "problem": "Im happy",
@@ -27,7 +27,7 @@
             "flag": "g"
         },
         "solved": false,
-        "decorate": false,
+        "decorate": true,
         "challenges": [
             {
                 "problem": "Batman is a not a hero he is a criminal",
@@ -47,7 +47,7 @@
             "flag": "g"
         },
         "solved": false,
-        "decorate": false,
+        "decorate": true,
         "challenges": [
             {
                 "problem": "Gucci gang, Gucci gang, Gucci gang (Gucci gang!)",
@@ -63,7 +63,7 @@
             "flag": "g"
         },
         "solved": false,
-        "decorate": false,
+        "decorate": true,
         "challenges": [
             {
                 "problem": "Hello, is it me you're looking for?",
@@ -83,7 +83,7 @@
             "flag": "g"
         },
         "solved": false,
-        "decorate": false,
+        "decorate": true,
         "challenges": [
             {
                 "problem": "I think i saw a ghost",
@@ -103,7 +103,7 @@
             "flag": "g"
         },
         "solved": false,
-        "decorate": false,
+        "decorate": true,
         "challenges": [
             {
                 "problem": "I need $500.",
